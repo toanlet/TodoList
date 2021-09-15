@@ -1,0 +1,15 @@
+.input-group-append {
+  position: relative;
+  .calendar {
+    position: absolute;
+    right: 0;
+  }
+}
+.add {
+  display: block;
+  width: 100%;
+  margin-top: 50px;
+}
+.required {
+  color: red;
+}

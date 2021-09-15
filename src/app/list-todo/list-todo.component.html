@@ -1,0 +1,19 @@
+
+<h3 class="py-3">To Do List</h3>
+ <form >
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Search..." name="search" [(ngModel)]="searchText">
+  </div>
+  </form>
+<div class="content">
+<div *ngFor="let todo of (list | sort | search:searchText)">
+  <app-todo [todo] = "todo" (checked) ="onChecked($event)"></app-todo>
+</div>
+</div>
+<div class="bottom" *ngIf="isDisplay">
+  <p>Bulk Action: </p>
+  <div>
+    <button class="btn btn-primary mr-3">Done</button>
+    <button class="btn btn-danger" (click) = "removeChecked()">Remove</button>
+  </div>
+</div>

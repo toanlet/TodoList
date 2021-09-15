@@ -1,0 +1,14 @@
+<div class="todo">
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" [checked]="todo.isChecked" (change)="onChecked(todo,$event)" > 
+    <p class="title">{{todo.title}}</p>
+  </div>
+  <div class="form-group ">
+    <button class="btn btn-primary mr-3" (click)="detailTodo(todo.id)">Detail</button>
+    <button class="btn btn-danger" (click)="removeTodo(todo.id)">Remove</button>
+  </div>
+</div>
+
+<div *ngIf="isDetail" class="my-3">
+  <app-add-todo [todo] ="todo"></app-add-todo>
+</div>
