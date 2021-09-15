@@ -1,10 +1,8 @@
 import { StoreService } from './../store.service';
 import { FormGroup, FormBuilder, Validators  } from '@angular/forms';
 import { Component, Input, OnInit, OnChanges } from '@angular/core';
-import { NgbDateParserFormatter } from '@ng-bootstrap/ng-bootstrap';
 import * as moment from 'moment';
 import { Todo } from './../Todo';
-import { collapseTextChangeRangesAcrossMultipleVersions } from 'typescript';
 @Component({
   selector: 'app-add-todo',
   templateUrl: './add-todo.component.html',
